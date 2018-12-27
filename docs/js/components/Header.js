@@ -11,11 +11,11 @@ const Header = () => (
     <nav>
       <ul>
         <h1>HumansOfHedspi</h1>
-        <li><Link to="/log-in/" activeClassName="is-active">Login/Sign up</Link></li>
-        <li class = "center"><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
+        <li><Link to="/log -in/" activeClassName="is-active">Login/Sign up</Link></li>
+        <li class = "block-center"><IndexLink to="/" activeClassName="is-active">Home</IndexLink></li>
         {/*<li><Link to="/horizontal/" activeClassName="is-active">Horizontal</Link></li>*/}
         {/*<li><Link to="/change-size/" activeClassName="is-active">Change Size</Link></li>*/}
-        <li><Link to="/real-world/" activeClassName="is-active">Newsfeed</Link></li>
+        <li><Link to="/news-feed/" activeClassName="is-active">News Feed</Link></li>
         <li><Link to="/about-us/" activeClassName ="is-active"> About Us</Link></li>
       </ul>
     </nav>

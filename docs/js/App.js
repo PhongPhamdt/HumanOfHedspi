@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* es lint-disable react/prop-types */
 import React from 'react';
 import Header from './components/Header';
 

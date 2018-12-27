@@ -1,4 +1,5 @@
 const path = require('path');
+// import 'scss/modules.container.scss';
 const webpack = require('webpack');
 
 module.exports = {
@@ -29,7 +30,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),

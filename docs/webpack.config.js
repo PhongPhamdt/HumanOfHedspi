@@ -28,6 +28,11 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(css|less)$/,
+        loader: styleExtractor.extract("style-loader", "css-loader!less-loader"),
+        use: ["style-loader", "css-loader"]
+      }
     ],
   },
   plugins: [

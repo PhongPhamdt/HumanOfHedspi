@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 const App = ({ children }) => (
   <div>
-    <Header />
+    <Header/>
     <div className="content">
       {children}
     </div>

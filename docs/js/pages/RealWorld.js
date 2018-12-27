@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import StackGrid, { transitions, easings } from '../../../src/';
-
+import { Link } from 'react-router';
 
 const transition = transitions.scaleDown;
 
@@ -51,8 +51,10 @@ const RealWorld = () => (
         key={obj.src}
         className="image"
       >
-        <img src={obj.src} alt={obj.label} />
-        <figcaption>{obj.label}</figcaption>
+        <Link to={`/comment/`}>
+          <img src={obj.src} alt={obj.label}/>
+          <figcaption>{obj.label}</figcaption>
+        </Link>
       </figure>
     ))}
   </StackGrid>

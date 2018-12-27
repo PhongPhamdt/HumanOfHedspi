@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router';
 
 export default class CommentForm extends React.Component {
 
@@ -31,11 +32,9 @@ export default class CommentForm extends React.Component {
   }
 
   render(){
-    //NOTE on callbacks : you need to bind "this" to refer component instance (React.createClass did the trick for you when ES5)
-    // "(e)=>this.handleSubmit(e)" is the same as :
-    // "this.handleSubmit.bind(this)"
-    // or "e=>this.handleSubmit(e)"
     return (
+      <div>
+        <img src={'./images/photos/photo01.jpg'} alt={'Sample image 1'}/>
       <form className="commentForm" onSubmit={(e) => this.handleSubmit(e)}>
         <input
           type="text"
@@ -51,7 +50,7 @@ export default class CommentForm extends React.Component {
         />
         <input type="submit" value="Post" />
       </form>
+        </div>
     );
   }
-
 }

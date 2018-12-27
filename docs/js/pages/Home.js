@@ -25,7 +25,7 @@ export default class Home extends Component {
     const items = [];
 
     for (let i = 0; i < 10; i += 1) {
-      items.push(this.createItem());
+      items.push(Home.createItem());
     }
 
     this.state = {
@@ -39,7 +39,7 @@ export default class Home extends Component {
     };
   }
 
-  createItem() {
+  static createItem() {
     const id = Math.random().toString(36).substr(2, 9);
     const height = Math.floor((Math.random() * (300 - 80)) + 80);
     const modifier = itemModifier[Math.floor(Math.random() * itemModifier.length)];
@@ -63,13 +63,13 @@ export default class Home extends Component {
 
   prependItem = () => {
     this.setState({
-      items: [this.createItem(), ...this.state.items],
+      items: [Home.createItem(), ...this.state.items],
     });
   }
 
   appendItem = () => {
     this.setState({
-      items: [...this.state.items, this.createItem()],
+      items: [...this.state.items, Home.createItem()],
     });
   }
 
@@ -77,7 +77,7 @@ export default class Home extends Component {
     const newItems = [];
 
     for (let i = 0; i < 5; i += 1) {
-      newItems.push(this.createItem());
+      newItems.push(Home.createItem());
     }
 
     this.setState({

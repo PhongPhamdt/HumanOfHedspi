@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import StackGrid, { transitions, easings } from '../../../src/';
 import DemoControl from '../components/DemoControl';
-import Header from '../components/Header';
+import Header2 from '../components/Header2';
 
 const itemModifier = [
   'pattern1',
@@ -132,7 +132,7 @@ export default class Home extends Component {
     const transition = transitions[transitionSelect];
     return (
       <div>
-        <Header/>
+        <Header2/>
         <div className="content">
           <div>
             <DemoControl

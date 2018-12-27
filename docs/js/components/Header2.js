@@ -13,11 +13,11 @@ const Header = () => (
         <ul>
           <h1>HumansOfHedspi</h1>
           <li id="sf"><SearchField/></li>
-          <li><Link to="/login/" activeClassName="is-active">Login/Sign up</Link></li>
-          <li className="block-center"><IndexLink to="/"
+          <li><Link to="/" activeClassName="is-active">Logout</Link></li>
+          <li className="block-center"><IndexLink to="/9/"
                                                   activeClassName="is-active">Home</IndexLink></li>
-          <li><Link to="/news-feed/" activeClassName="is-active">News Feed</Link></li>
-          <li><Link to="/about-us/" activeClassName="is-active"> About Us</Link></li>
+          <li><Link to="/9/news-feed/" activeClassName="is-active">News Feed</Link></li>
+          <li><Link to="/9/about-us/" activeClassName="is-active"> About Us</Link></li>
         </ul>
       </div>
     </nav>

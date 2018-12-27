@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+import Header2 from '../components/Header2';
 // import { Link } from 'react-router';
 
 export default class CommentForm extends React.Component {
@@ -35,17 +35,11 @@ export default class CommentForm extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header2/>
         <div className="content">
           <div>
-            <img src={'./images/photos/photo01.jpg'} alt={'Sample image 1'}/>
+            <img src={'./images/photos/photo03.jpg'} alt={'Sample image 3'}/>
             <form className="commentForm" onSubmit={(e) => this.handleSubmit(e)}>
-              <input
-                type="text"
-                placeholder="Your name"
-                value={this.state.author}
-                onChange={(e) => this.handleAuthorChange(e)}
-              />
               <input
                 type="text"
                 placeholder="Say something..."

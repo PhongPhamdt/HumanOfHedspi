@@ -1,13 +1,9 @@
 /* es lint-disable react/prop-types */
 import React from 'react';
-import Header from './components/Header';
 
 const App = ({ children }) => (
   <div>
-    <Header/>
-    <div className="content">
-      {children}
-    </div>
+    {children}
   </div>
 );
 

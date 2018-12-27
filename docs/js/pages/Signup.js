@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import axios from '../axios';
 import Header from '../components/Header';
 
-export default class SignInForm extends Component {
+class SignUpForm extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       email: '',
       password: '',
-      username: '',
-      id: ''
+      name: '',
+      hasAgreed: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -30,24 +29,9 @@ export default class SignInForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     console.log('The form was submitted with the following data:');
     console.log(this.state);
   }
-
-  _onLogin = () => {
-    axios
-      .post('/api/auth/login', {
-        username: 'snowfox9812',
-        password: 'trung123'
-      })
-      .then(response =>
-        this.setState({
-          username: response.data.username,
-          id: response.data.id
-        })
-      );
-  };
 
   render() {
     return (
@@ -57,14 +41,20 @@ export default class SignInForm extends Component {
           <div className="container">
             <div className="row">
               <div className="FormCenter col-7">
-                <form className="FormFields" onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="FormFields">
                   <div className="FormField">
-                    <label className="FormField__Label" htmlFor="email">E-Mail Address</label>
-                    <input type="email" id="email" className="FormField__Input"
-                           placeholder="Enter your username" name="email" value={this.state.email}
+                    <label className="FormField__Label" htmlFor="name">Full Name</label>
+                    <input type="text" id="name" className="FormField__Input"
+                           placeholder="Enter your full name" name="name" value={this.state.name}
                            onChange={this.handleChange}/>
                   </div>
-
+                  <div className="FormField">
+                    <label className="FormField__Label" htmlFor="password">Password</label>
+                    <input type="password" id="password" className="FormField__Input"
+                           placeholder="Enter your password" name="password"
+                           value={this.state.password}
+                           onChange={this.handleChange}/>
+                  </div>
                   <div className="FormField">
                     <label className="FormField__Label" htmlFor="password">Password</label>
                     <input type="password" id="password" className="FormField__Input"
@@ -73,16 +63,17 @@ export default class SignInForm extends Component {
                            onChange={this.handleChange}/>
                   </div>
 
-                  <div className="FormField button-container">
-                    <div className="row">
-                      <div className="col-5">
-                        <Link to="/9" className="FormField__Button mr-20" onClick={this._onLogin}>Sign
-                          In</Link>
-                      </div>
-                      <div className="col-5">
-                        <Link to="/sign-up/" className="FormField__Button">Create an account</Link>
-                      </div>
-                    </div>
+                  <div className="FormField">
+                    <label className="FormField__CheckboxLabel">
+                      <input className="FormField__Checkbox" type="checkbox" name="hasAgreed"
+                             value={this.state.hasAgreed} onChange={this.handleChange}/> I agree all
+                      statements in <a href="" className="FormField__TermsLink">terms of service</a>
+                    </label>
+                  </div>
+
+                  <div className="FormField">
+                    <Link to="/login/" className="FormField__Button mr-20">Sign Up</Link>
+                    <Link to="/login/" className="FormField__Link">I'm already member</Link>
                   </div>
                 </form>
               </div>
@@ -99,3 +90,4 @@ export default class SignInForm extends Component {
   }
 }
 
+export default SignUpForm;

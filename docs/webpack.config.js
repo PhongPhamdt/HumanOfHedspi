@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.(css|less)$/,
-        loader: styleExtractor.extract("style-loader", "css-loader!less-loader"),
+        // loader: styleExtractor.extract("style-loader", "css-loader!less-loader"),
         use: ["style-loader", "css-loader"]
       }
     ],

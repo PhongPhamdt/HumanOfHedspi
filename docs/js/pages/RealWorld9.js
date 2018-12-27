@@ -2,7 +2,7 @@
 import React from 'react';
 import StackGrid, { transitions, easings } from '../../../src/';
 import { Link } from 'react-router';
-import Header from '../components/Header';
+import Header2 from '../components/Header2';
 
 const transition = transitions.scaleDown;
 
@@ -34,7 +34,7 @@ const images = [
 
 const RealWorld = () => (
   <div>
-    <Header/>
+    <Header2/>
     <div className="content">
       <StackGrid
         monitorImagesLoaded
@@ -55,7 +55,7 @@ const RealWorld = () => (
             key={obj.src}
             className="image"
           >
-            <Link to={`/comment/${obj.id}`}>
+            <Link to={`/9/comment/${obj.id}/`}>
               <img src={obj.src} alt={obj.label}/>
               <figcaption>{obj.label}</figcaption>
             </Link>

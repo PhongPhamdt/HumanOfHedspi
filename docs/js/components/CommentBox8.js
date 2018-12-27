@@ -27,7 +27,7 @@ class CommentBox extends React.Component {
 
   _onClick = (text) => {
     axios
-      .post("/api/comment/post_comment/9/5", {
+      .post("/api/comment/post_comment/9/12", {
         content: text
       })
       .then()

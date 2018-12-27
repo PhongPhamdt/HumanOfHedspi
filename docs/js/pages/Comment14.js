@@ -1,59 +1,20 @@
 import React from 'react';
 import Header2 from '../components/Header2';
+import CommentBox from '../components/CommentBox14';
+import CommentSite from '../components/CommentSite14';
 // import { Link } from 'react-router';
 
 export default class CommentForm extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.init();
-  }
-
-  init() {
-    this.state = { author: '', text: '' };
-  }
-
-  handleAuthorChange(e) {
-    this.setState({ author: e.target.value });
-  }
-
-  handleTextChange(e) {
-    this.setState({ text: e.target.value });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    var author = this.state.author.trim();
-    var text = this.state.text.trim();
-    if (!text || !author) {
-      return;
-    }
-    this.props.onCommentSubmit({ author: author, text: text });
-    this.setState({ author: '', text: '' });
-  }
-
   render() {
     return (
       <div>
         <Header2/>
         <div className="content">
-          <div>
+          <div className="col-8 mr-auto ml-auto">
             <img src={'./images/photos/photo14.jpg'} alt={'Sample image 14'}/>
-            <form className="commentForm" onSubmit={(e) => this.handleSubmit(e)}>
-              <input
-                type="text"
-                placeholder="Your name"
-                value={this.state.author}
-                onChange={(e) => this.handleAuthorChange(e)}
-              />
-              <input
-                type="text"
-                placeholder="Say something..."
-                value={this.state.text}
-                onChange={(e) => this.handleTextChange(e)}
-              />
-              <input type="submit" value="Post"/>
-            </form>
+            <p><span>Created by</span>{" "}Snowfox9812</p>
+            <CommentSite/>
+            <CommentBox/>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header2 from '../components/Header2';
 import CommentBox from '../components/CommentBox';
+import CommentSite from '../components/CommentSite';
 // import { Link } from 'react-router';
 
 export default class CommentForm extends React.Component {
@@ -11,7 +12,9 @@ export default class CommentForm extends React.Component {
         <div className="content">
           <div className="col-8 mr-auto ml-auto">
             <img src={'./images/photos/photo01.jpg'} alt={'Sample image 1'}/>
-            {/*<CommentBox/>*/}
+            <p><span>Created by</span>{" "}Snowfox9812</p>
+            <CommentSite/>
+            <CommentBox/>
           </div>
         </div>
       </div>

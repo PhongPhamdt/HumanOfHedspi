@@ -17,7 +17,7 @@ const Header = () => (
           <li className="block-center"><IndexLink to="/9/"
                                                   activeClassName="is-active">Home</IndexLink></li>
           <li><Link to="/9/news-feed/" activeClassName="is-active">News Feed</Link></li>
-          <li><Link to="/9/about-us/" activeClassName="is-active"> About Us</Link></li>
+          <li><span>Hi, snowfox9812</span></li>
         </ul>
       </div>
     </nav>

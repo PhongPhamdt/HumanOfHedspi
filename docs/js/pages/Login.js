@@ -39,7 +39,7 @@ export default class SignInForm extends Component {
     axios
       .post('/api/auth/login', {
         username: 'snowfox9812',
-        password: 'trung123'
+        password: 'dmm'
       })
       .then(response =>
         this.setState({

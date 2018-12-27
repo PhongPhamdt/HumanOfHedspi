@@ -25,6 +25,7 @@ import Comment13 from './pages/Comment13';
 import Comment14 from './pages/Comment14';
 
 import RealWorld9 from './pages/RealWorld9';
+import AboutUs from './pages/AboutUs';
 
 const routes = () => (
   <Route path="/" component={App}>
@@ -37,20 +38,21 @@ const routes = () => (
     <Route path="/sign-up/" components={SignUp}/>
     <Route path="/9" component={Home9}/>
     <Route path="/9/news-feed/" component={RealWorld9} />
-    <Route path="/9/comment/1/" components={Comment1}/>
-    <Route path="/9/comment/2/" components={Comment2}/>
-    <Route path="/9/comment/3/" components={Comment3}/>
-    <Route path="/9/comment/4/" components={Comment4}/>
-    <Route path="/9/comment/5/" components={Comment5}/>
-    <Route path="/9/comment/6/" components={Comment6}/>
-    <Route path="/9/comment/7/" components={Comment7}/>
-    <Route path="/9/comment/8/" components={Comment8}/>
-    <Route path="/9/comment/9/" components={Comment9}/>
-    <Route path="/9/comment/10/" components={Comment10}/>
-    <Route path="/9/comment/11/" components={Comment11}/>
-    <Route path="/9/comment/12/" components={Comment12}/>
-    <Route path="/9/comment/13/" components={Comment13}/>
-    <Route path="/9/comment/14/" components={Comment14}/>
+    <Route path="/9/comment/5/" components={Comment1}/>
+    <Route path="/9/comment/6/" components={Comment2}/>
+    <Route path="/9/comment/7/" components={Comment3}/>
+    <Route path="/9/comment/8/" components={Comment4}/>
+    <Route path="/9/comment/9/" components={Comment5}/>
+    <Route path="/9/comment/10/" components={Comment6}/>
+    <Route path="/9/comment/11/" components={Comment7}/>
+    <Route path="/9/comment/12/" components={Comment8}/>
+    <Route path="/9/comment/13/" components={Comment9}/>
+    <Route path="/9/comment/14/" components={Comment10}/>
+    <Route path="/9/comment/15/" components={Comment11}/>
+    <Route path="/9/comment/16/" components={Comment12}/>
+    <Route path="/9/comment/17/" components={Comment13}/>
+    <Route path="/9/comment/18/" components={Comment14}/>
+    <Route path="/about-us/" components={AboutUs}/>
   </Route>
 );
 
